@@ -12,11 +12,11 @@ System.out.println(pcode+"\t\t"+pname+"\t\t"+price);
 }
 static void Lowest(double price1,double price2,double price3)
 {
-if(price1>price2 && price1>price3)
+if(price1<price2 && price1<price3)
 {
 System.out.println("product1 has the lowest cost");
 }
-else if(price2>price1&& price2>price3)
+else if(price2<price1&& price2<price3)
 {
 System.out.println("product2 has the lowest cost");
 }
