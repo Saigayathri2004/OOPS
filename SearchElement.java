@@ -42,3 +42,19 @@ public class SearchElement {
         sc.close();
     }
 }
+/*Algorithm for Searching an Element in an Array (Linear Search)
+
+    Start
+    Create a Scanner object to take user input.
+    Prompt the user to enter the number of elements (n).
+    Read the integer input (n) and initialize an integer array of size n.
+    Prompt the user to enter n elements and store them in the array.
+    Ask the user to enter the element (key) to search.
+    Initialize a variable position = -1 (to track if the element is found).
+    Loop through the array from index 0 to n-1:
+        If arr[i] == key, set position = i and break the loop.
+    Check the position variable:
+        If position != -1, print the index where the element was found.
+        Otherwise, print "Element not found".
+    Close the Scanner object to avoid resource leaks.
+    End*/
