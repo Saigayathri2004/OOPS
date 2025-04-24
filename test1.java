@@ -1,3 +1,4 @@
+//thread implimentation example
 import java.util.*;
 class even extends Thread 
 {
