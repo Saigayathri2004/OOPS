@@ -1,0 +1,62 @@
+student@cec-ThinkCentre-M83:~/sai$ javac evenoddexception.java
+student@cec-ThinkCentre-M83:~/sai$ java evenoddexception
+enter the no
+4
+even
+successful!!!
+student@cec-ThinkCentre-M83:~/sai$ java evenoddexception
+enter the no
+3
+odd
+successful!!!
+student@cec-ThinkCentre-M83:~/sai$ gedit exp2.java
+student@cec-ThinkCentre-M83:~/sai$ javac exp2.java
+exp2.java:16: error: unreported exception negException; must be caught or declared to be thrown
+    throw new negException("negative no");
+    ^
+exp2.java:35: error: cannot find symbol
+   avge(n);
+   ^
+  symbol:   method avge(int)
+  location: class exp2
+2 errors
+student@cec-ThinkCentre-M83:~/sai$ gedit exp2.java
+student@cec-ThinkCentre-M83:~/sai$ javac exp2.java
+exp2.java:16: error: unreported exception negException; must be caught or declared to be thrown
+    throw new negException("negative no");
+    ^
+1 error
+student@cec-ThinkCentre-M83:~/sai$ gedit exp2.java
+student@cec-ThinkCentre-M83:~/sai$ javac exp2.java
+student@cec-ThinkCentre-M83:~/sai$ java exp2
+enter the limit of nos :
+3
+2
+4
+6
+avg of nos = 4
+end....
+student@cec-ThinkCentre-M83:~/sai$ gedit exp2.java
+student@cec-ThinkCentre-M83:~/sai$ javac exp2.java
+student@cec-ThinkCentre-M83:~/sai$ java exp2
+enter the limit of nos :
+3
+enter the nos :
+1 
+2
+3
+avg of nos = 2
+end....
+student@cec-ThinkCentre-M83:~/sai$ java exp2
+enter the limit of nos :
+4
+enter the nos :
+3
+-2
+negative no
+end....
+student@cec-ThinkCentre-M83:~/sai$ gedit exp2.java
+^C
+student@cec-ThinkCentre-M83:~/sai$ gedit exp2.java
+
+
