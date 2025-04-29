@@ -1,3 +1,4 @@
+//avg if positive nos exeception for neg
 import java.util.*;
 class negException extends Exception{
  negException(String s){
