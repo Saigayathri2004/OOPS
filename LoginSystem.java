@@ -1,54 +1,59 @@
 import java.util.Scanner;
 
-// Custom Exception for invalid username
+
 class InvalidUsernameException extends Exception {
-    public InvalidUsernameException(String message) {
-        super(message);
+    InvalidUsernameException(String s) {
+        super(s);
     }
 }
 
-// Custom Exception for invalid password
+
 class InvalidPasswordException extends Exception {
-    public InvalidPasswordException(String message) {
-        super(message);
+    InvalidPasswordException(String s) {
+        super(s);
     }
 }
 
-public class LoginSystem {
+public class loginsystem {
+    private static final String VALID_USERNAME = "saigayathri";
+    private static final String VALID_PASSWORD = "pass@123";
 
-    // Hardcoded valid credentials
-    private static final String VALID_USERNAME = "admin";
-    private static final String VALID_PASSWORD = "password123";
+   
+    public static void authenticate(String user_name, String password)
+            throws InvalidUsernameException, InvalidPasswordException {
 
-    public static void authenticate(String username, String password) throws InvalidUsernameException, InvalidPasswordException {
-        if (!username.equals(VALID_USERNAME)) {
-            throw new InvalidUsernameException("Error: Username is incorrect.");
+        if (user_name.length() < 6) {
+            throw new InvalidUsernameException("Username must be at least 6 characters long.");
+        }
+
+        if (!user_name.equals(VALID_USERNAME)) {
+            throw new InvalidUsernameException("No such user exists in the system.");
         }
 
         if (!password.equals(VALID_PASSWORD)) {
-            throw new InvalidPasswordException("Error: Password is incorrect.");
+            throw new InvalidPasswordException("Wrong password.");
         }
 
-        System.out.println("Login successful! Welcome " + username);
+        System.out.println("Welcome user: " + user_name);
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+   
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
 
         try {
-            System.out.print("Enter username: ");
-            String username = scanner.nextLine();
+            System.out.print("Enter the username: ");
+            String user_name = sc.nextLine();
 
             System.out.print("Enter password: ");
-            String password = scanner.nextLine();
+            String password = sc.nextLine();
 
-            authenticate(username, password);
-
+            authenticate(user_name, password);
         } catch (InvalidUsernameException | InvalidPasswordException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Authentication failed: " + e.getMessage());
         } finally {
-            scanner.close();
-            System.out.println("Authentication process ended.");
+            sc.close(); 
+            System.out.println("end.");
         }
     }
 }
