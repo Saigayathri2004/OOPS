@@ -158,4 +158,20 @@ file copied successfully
 ^C
 student@cec-ThinkCentre-M83:~/sai$ gedit exp2.java
 
+student@cec-ThinkCentre-M83:~$ gedit file2.java
+student@cec-ThinkCentre-M83:~$ gedit file2.java
+student@cec-ThinkCentre-M83:~$ javac file2.java
+student@cec-ThinkCentre-M83:~$ java file2
+Error: Could not find or load main class file2
+Caused by: java.lang.ClassNotFoundException: file2
+student@cec-ThinkCentre-M83:~$ gedit file2.java
+student@cec-ThinkCentre-M83:~$ javac file2.java
+student@cec-ThinkCentre-M83:~$ java file2
+0123456789
+
+
+Contents of odd.txt:
+13579
+Contents of even.txt:
+02468s
 
