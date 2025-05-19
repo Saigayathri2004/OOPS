@@ -56,6 +56,105 @@ enter the nos :
 negative no
 end....
 student@cec-ThinkCentre-M83:~/sai$ gedit exp2.java
+
+
+19/5
+student@cec-ThinkCentre-M83:~$ gedit filereadwriteexample.java
+student@cec-ThinkCentre-M83:~$ javac filereadwriteexample.java
+student@cec-ThinkCentre-M83:~$ java filereadwriteexample
+File written successfully.
+Contents of the file:
+Hello, this is a simple file write and read program in Java.
+student@cec-ThinkCentre-M83:~$ gedit filereadwriteexample.java
+student@cec-ThinkCentre-M83:~$ javac filereadwriteexample.java
+student@cec-ThinkCentre-M83:~$ java filereadwriteexample
+Enter text to write to the file: hello im sai
+Your input has been written to the file.
+
+Contents of the file:
+hello im sai
+student@cec-ThinkCentre-M83:~$ gedit filereadwriteexample.java
+^C
+student@cec-ThinkCentre-M83:~$ gedit file.java
+student@cec-ThinkCentre-M83:~$ javac file.java
+file.java:4: error: ';' expected
+public static void main(String args[])
+                                      ^
+file.java:6: error: illegal start of type
+try{
+^
+file.java:22: error: illegal start of type
+catch(Exception e)
+^
+file.java:22: error: ';' expected
+catch(Exception e)
+                 ^
+4 errors
+student@cec-ThinkCentre-M83:~$ gedit file.java
+student@cec-ThinkCentre-M83:~$ javac file.java
+file.java:16: error: unexpected type
+while((1=f2.read())!=-1)
+       ^
+  required: variable
+  found:    value
+file.java:16: error: cannot find symbol
+while((1=f2.read())!=-1)
+           ^
+  symbol:   method read()
+  location: variable f2 of type FileWriter
+2 errors
+student@cec-ThinkCentre-M83:~$ gedit file.java
+student@cec-ThinkCentre-M83:~$ javac file.java
+student@cec-ThinkCentre-M83:~$ java file
+java.io.FileNotFoundException: file2.txt (No such file or directory)
+student@cec-ThinkCentre-M83:~$ gedit file.java
+student@cec-ThinkCentre-M83:~$ gedit file.java
+student@cec-ThinkCentre-M83:~$ javac file.java
+student@cec-ThinkCentre-M83:~$ java file
+Enter text to write to the file: hello hai
+content write to file1.txt
+read the content ftom file
+h
+e
+l
+l
+o
+ 
+h
+a
+i
+student@cec-ThinkCentre-M83:~$ gedit file1.java
+student@cec-ThinkCentre-M83:~$ javac file1.java
+file1.java:5: error: unreported exception FileNotFoundException; must be caught or declared to be thrown
+FileInputStream f=new FileInputStream("sample.txt");
+                  ^
+file1.java:6: error: unreported exception FileNotFoundException; must be caught or declared to be thrown
+FileOutputStream f2=new FileOutputStream("cp.txt");
+                    ^
+file1.java:8: error: unreported exception IOException; must be caught or declared to be thrown
+while((c=f.read())!= -1)
+               ^
+file1.java:10: error: unreported exception IOException; must be caught or declared to be thrown
+f2.write(c);
+        ^
+file1.java:13: error: unreported exception IOException; must be caught or declared to be thrown
+f.close();
+       ^
+file1.java:14: error: unreported exception IOException; must be caught or declared to be thrown
+f2.close();
+        ^
+6 errors
+student@cec-ThinkCentre-M83:~$ gedit file1.java
+student@cec-ThinkCentre-M83:~$ gedit file1.java
+student@cec-ThinkCentre-M83:~$ javac file1.java
+student@cec-ThinkCentre-M83:~$ java file1
+error
+student@cec-ThinkCentre-M83:~$ gedit file1.java
+student@cec-ThinkCentre-M83:~$ javac file1.java
+student@cec-ThinkCentre-M83:~$ java file1
+sample txt 1 copy me
+file copied successfully
+
 ^C
 student@cec-ThinkCentre-M83:~/sai$ gedit exp2.java
 
