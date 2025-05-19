@@ -15,7 +15,7 @@ f1.close();
 System.out.println("read the content ftom file");
 while((i=f2.read())!=-1)
 {
-System.out.println((char)i);
+System.out.print((char)i);
 }
 f2.close();
 }
