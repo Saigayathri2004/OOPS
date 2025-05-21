@@ -175,3 +175,56 @@ Contents of odd.txt:
 Contents of even.txt:
 02468s
 
+example for using StringTokenizer
+
+import java.io.*;
+import java.util.StringTokenizer;
+
+class file2 {
+    public static void main(String args[]) throws IOException {
+        FileInputStream f = new FileInputStream("number.txt");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(f));
+        FileOutputStream f2 = new FileOutputStream("odd.txt");
+        FileOutputStream f3 = new FileOutputStream("even.txt");
+
+        String line;
+        while ((line = reader.readLine()) != null) {
+            StringTokenizer tokenizer = new StringTokenizer(line, " "); // tokenizing by space
+            while (tokenizer.hasMoreTokens()) {
+                String token = tokenizer.nextToken();
+                try {
+                    int number = Integer.parseInt(token); // parse each token into an integer
+
+                    if (number % 2 == 0) {
+                        f3.write((token + " ").getBytes()); // write even number to even.txt
+                    } else {
+                        f2.write((token + " ").getBytes()); // write odd number to odd.txt
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Skipping invalid token: " + token);
+                }
+            }
+        }
+
+        f.close();
+        f2.close();
+        f3.close();
+
+        System.out.println("\nContents of odd.txt:");
+        try (FileInputStream oddFile = new FileInputStream("odd.txt")) {
+            int c;
+            while ((c = oddFile.read()) != -1) {
+                System.out.print((char) c);
+            }
+        }
+
+        System.out.println("\nContents of even.txt:");
+        try (FileInputStream evenFile = new FileInputStream("even.txt")) {
+            int c;
+            while ((c = evenFile.read()) != -1) {
+                System.out.print((char) c);
+            }
+        }
+    }
+}
+
