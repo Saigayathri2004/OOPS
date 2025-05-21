@@ -227,4 +227,41 @@ class file2 {
         }
     }
 }
+________________________________________________________________________________
+program:
+import java.util.*;
+class arraylist{
+public static void main(String args[])
+{
+ArrayList<Integer> num= new ArrayList<>();
+num.add(10);
+num.add(20);
+num.add(30);
+Scanner sc= new Scanner(System.in);
+System.out.println("enter new element");
+num.add(sc.nextInt());
+System.out.println("List: "+num);
+int numb=num.get(2);
+System.out.println("accessed element "+numb);
+int renum=num.remove(1);
+System.out.println("removed element :"+renum);
+for(int i = 0;i < num.size();i++)
+{
+System.out.print(num.get(i)+" ");
+}sc.close();
+}
+}
+-------------------------------------------
+output:
+user@user-HP-280-G3-MT:~$ gedit arraylist.java
+user@user-HP-280-G3-MT:~$ javac arraylist.java
+user@user-HP-280-G3-MT:~$ java arraylist
+enter new element
+23
+List: [10, 20, 30, 23]
+accessed element 30
+removed element :20
+10 30 23 
+_________________________________________________________________________________
 
+package
